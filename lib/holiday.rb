@@ -92,7 +92,7 @@ def all_holidays_with_bbq(holiday_hash)
       with_bbq << holiday if supplies.include?("BBQ")
     end
   end
- binding.pry
+ 
   with_bbq
 
 end
