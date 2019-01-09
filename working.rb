@@ -8,7 +8,7 @@ def all_supplies_in_holidays(holiday_hash)
         str.capitalize
       end
       hol.join
-      puts "\t#{hol} : #{supplies.to_s}"
+      puts "\t#{hol} : #{supplies.join}"
       
     end
   end
