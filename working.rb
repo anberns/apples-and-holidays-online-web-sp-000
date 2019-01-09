@@ -1,15 +1,15 @@
 require 'pry'
-def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
-  
-  
-  holiday_hash[season.to_sym][holiday_name.to_sym] = supply_array
-  binding.pry
-  holiday_hash
+def all_winter_holiday_supplies(holiday_hash)
+  winter_supplies = []
+  holiday_hash[:winter].each do |holiday, supplies|
+    supplies.each do |supply|
+      winter_supplies << supply
+    end
+  end
+  winter_supplies
 
 end
-season = "winter"
-holiday_name = "butts"
-supply_array = ["butts", "more butts"]
+
 holiday_hash = {
     :winter => {
        :christmas => ["Lights", "Wreath"],
@@ -25,4 +25,4 @@ holiday_hash = {
        :memorial_day => ["BBQ"]
      }
    }
-add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
+all_winter_holiday_supplies(holiday_hash)
