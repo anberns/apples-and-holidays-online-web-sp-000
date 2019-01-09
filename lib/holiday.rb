@@ -82,7 +82,7 @@ def all_supplies_in_holidays(holiday_hash)
       hol.each do |str|
         str.capitalize!
       end
-      puts "\t#{hol.join(" ")}: #{supplies.join(', ')}"
+      puts "\/t#{hol.join(" ")}: #{supplies.join(', ')}"
       
     end
   end
