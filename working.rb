@@ -1,6 +1,6 @@
 require 'pry'
-def all_winter_holiday_supplies(holiday_hash)
-  winter_supplies = []
+def all_holidays_with_bbq(holiday_hash)
+  with_bbq = []
   holiday_hash[:winter].each do |holiday, supplies|
     supplies.each do |supply|
       winter_supplies << supply
@@ -26,4 +26,4 @@ holiday_hash = {
        :memorial_day => ["BBQ"]
      }
    }
-all_winter_holiday_supplies(holiday_hash)
+all_holidays_with_bbq(holiday_hash)
