@@ -3,12 +3,12 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holiday|
     puts season.to_s.capitalize + ":"
     holiday.each do |holiday, supplies|
-      hol = holiday.to_s.split
+      hol = holiday.to_s.split('_')
       hol.each do |str|
         str.capitalize
       end
       hol.join
-      puts "\t#{hol} : #{supplies.join(', ')}"
+      puts "\t#{hol}: #{supplies.join(', ')}"
       
     end
   end
